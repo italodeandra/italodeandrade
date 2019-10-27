@@ -1,11 +1,15 @@
 {
   "name": "italodeandra",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
+    "node-sass": "^4.12.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0"
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.2.0",
+    "reactjs-library": "https://github.com/italodeandra/reactjs-library",
+    "typescript": "^3.6.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -27,5 +31,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.9",
+    "@types/react-dom": "^16.9.2",
+    "@types/react-router-dom": "^5.1.0",
+    "@types/reactjs-library": "https://github.com/italodeandra/types-reactjs-library"
+  },
+  "description": "My personal website",
+  "repository": "https://github.com/italodeandra/reactjs-library.git",
+  "author": "Ítalo Andrade <italodeandra@gmail.com>",
+  "license": "MIT"
 }
