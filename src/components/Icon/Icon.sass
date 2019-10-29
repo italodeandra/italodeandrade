@@ -1,0 +1,13 @@
+@import "~reactjs-library/dist/utils/chooseContrastColor"
+@import "~reactjs-library/dist/variables"
+
+.Icon
+    height: 24px
+    width: 24px
+    min-width: 24px
+    user-select: none
+    cursor: inherit
+    display: inline-block
+
+    svg path
+        fill: lighten(choose-contrast-color($primary-color), 20)

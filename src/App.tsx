@@ -3,7 +3,6 @@ import { BrowserRouter as Router, NavLink, Route, Switch } from 'react-router-do
 import {
     ApplicationBar,
     classNames,
-    Icon,
     List,
     NavigationDrawer,
     Tooltip,
@@ -12,7 +11,8 @@ import {
     useMobile
 } from 'reactjs-library'
 import './App.sass'
-import HomeView from './core/Home/HomeView'
+import Icon from './components/Icon/Icon'
+import ProfileView from './core/Profile/ProfileView'
 import useTitle from './hooks/useTitle'
 
 const App: FunctionComponent = () => {
@@ -22,7 +22,8 @@ const App: FunctionComponent = () => {
     let [ title ] = useTitle()
 
     let menus = [
-        { title: 'Home', icon: 'home', exact: true, path: '/', component: <HomeView/> }
+        { title: 'Profile', icon: 'account-circle', exact: true, path: '/', component: <ProfileView/> },
+        { title: 'History', icon: 'account-circle', exact: true, path: '/', component: <ProfileView/> }
     ]
 
     return (
