@@ -13,6 +13,7 @@ interface Props {
     center?: boolean
     codeblock?: boolean
     ellipsis?: boolean
+    justify?: boolean
 
     select?: 'all' | boolean
 
@@ -35,6 +36,7 @@ const Text: FunctionComponent<Props> = ({
                                             center,
                                             codeblock,
                                             ellipsis,
+                                            justify,
 
                                             size,
                                             style,
@@ -69,6 +71,7 @@ const Text: FunctionComponent<Props> = ({
                 center && 'center',
                 codeblock && 'codeblock',
                 ellipsis && 'ellipsis',
+                justify && 'justify',
                 className
             )}
             style={{ ...style, fontSize: size }}
