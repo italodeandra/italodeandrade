@@ -1,0 +1,37 @@
+.ProjectsItem.ProjectsItem
+    display: flex
+    margin-bottom: 16px
+
+    &:not(.is-mobile)
+        margin: 16px 8px !important
+
+    .company
+        background-position: center
+        background-size: cover
+        $size: 6*8px
+        height: $size
+        width: $size
+        min-width: $size
+        border-radius: $size/2
+        margin-right: 16px
+        background-color: #dadada
+        display: flex
+        justify-content: center
+        align-items: center
+
+        svg path
+            fill: #666666
+
+    .title
+        margin-top: 13px
+        font-weight: 500
+
+    .period
+        color: #969696
+        margin: 8px 0
+
+    .location
+        color: #b8b8b8
+        margin: 8px 0
+        font-size: 12px
+
