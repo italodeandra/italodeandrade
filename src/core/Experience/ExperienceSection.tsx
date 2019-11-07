@@ -20,7 +20,7 @@ const ExperienceSection: FunctionComponent = () => {
         },
         {
             name: 'smn',
-            title: 'Developer at SMN',
+            title: 'Developer and Scrum Master at SMN',
             period: { start: new Date('2016-05-02'), end: new Date('2018-07-02') },
             location: 'Franca, São Paulo, Brazil',
             description: 'Started as part of a innovation team focused on bringing new technologies. Built the first ' +
