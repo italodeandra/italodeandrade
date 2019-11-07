@@ -7,6 +7,7 @@ const ProfileSection: FunctionComponent = () => {
         { href: 'https://italodeandra.de', icon: 'web', here: true },
         { href: 'mailto:italodeandra@gmail.com', icon: 'at' },
         { href: 'https://github.com/italodeandra', icon: 'github-circle' },
+        { href: 'https://www.linkedin.com/in/italodeandra/', icon: 'linkedin-box' },
         { href: 'https://stackoverflow.com/users/12038349/italodeandra', icon: 'stack-overflow' },
         { href: 'https://www.instagram.com/italodeandra/', icon: 'instagram' }
     ]
