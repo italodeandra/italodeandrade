@@ -8,7 +8,8 @@
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
-    "reactjs-library": "https://github.com/italodeandra/reactjs-library",
+    "reactjs-library": "git+https://github.com/italodeandra/reactjs-library.git",
+    "serve": "^11.2.0",
     "typescript": "^3.6.4"
   },
   "scripts": {
@@ -36,7 +37,7 @@
     "@types/react": "^16.9.9",
     "@types/react-dom": "^16.9.2",
     "@types/react-router-dom": "^5.1.0",
-    "@types/reactjs-library": "https://github.com/italodeandra/types-reactjs-library"
+    "@types/reactjs-library": "git+https://github.com/italodeandra/types-reactjs-library.git"
   },
   "description": "My personal website",
   "repository": "https://github.com/italodeandra/reactjs-library.git",
