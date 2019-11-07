@@ -21,7 +21,6 @@
     "noImplicitAny": true
   },
   "include": [
-    "node_modules",
     "src"
   ]
 }
