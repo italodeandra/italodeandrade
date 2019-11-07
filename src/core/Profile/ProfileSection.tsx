@@ -1,7 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { Icon, TooltipSetRef } from 'reactjs-library'
-import Text from '../../components/Text/Text'
-import Tooltip from '../../components/Tooltip/Tooltip'
+import { Icon, Text, Tooltip, TooltipSetRef } from 'reactjs-library'
 import './ProfileSection.sass'
 
 const ProfileSection: FunctionComponent = () => {
@@ -23,21 +21,22 @@ const ProfileSection: FunctionComponent = () => {
                 <div className='profile-picture'/>
                 <div>
                     <Text paragraph bold>Ítalo Andrade</Text>
-                    <Text paragraph>{age} years old</Text>
+                    <Text paragraph>{age} years old / from Brazil</Text>
                     <Text paragraph>italodeandra@gmail.com</Text>
+                    <Text paragraph className='show-on-print'>italodeandra.de</Text>
                 </div>
             </Text>
 
             <Text header>Profile</Text>
             <Text paragraph justify>
-                A very curious, enthusiastic and challenge seeker. I love debugging code, fixing issues, learning a new
-                framework or language to use on new situations and I'm very passionate about clean code. Liked being a
-                leader on past experience and had the ability to lead teams to process and manage large volumes without
-                compromising service or quality.
+                A very curious, enthusiastic, self-taught and challenge seeker. I love debugging code, fixing issues,
+                learning a new framework or language to use on new situations and I'm very passionate about clean code.
+                Liked being a leader on past experience and had the ability to lead teams to process and manage large
+                volumes without compromising service or quality.
             </Text>
 
-            <Text subheader select={false}>Where to find me</Text>
-            <Text paragraph>
+            <Text subheader select={false} className='hide-on-print'>Where to find me</Text>
+            <Text paragraph className='hide-on-print'>
                 {whereToFindMe.map(i => (<Tooltip
                     key={i.icon}
                     title={'You\'re here!'}

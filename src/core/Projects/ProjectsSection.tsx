@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { classNames, useMobile } from 'reactjs-library'
-import Text from '../../components/Text/Text'
+import { classNames, Text, useMobile } from 'reactjs-library'
 import ProjectsItem from './Item/ProjectsItem'
 import './ProjectsSection.sass'
 

@@ -1,9 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { classNames, useMobile } from 'reactjs-library'
-import Icon from '../../../components/Icon/Icon'
-import Text from '../../../components/Text/Text'
-import useTimeAgo from '../../../hooks/useTimeAgo'
-import dateFormat from '../../../utils/dateFormat'
+import { classNames, dateFormat, Icon, Text, useMobile, useTimeAgo } from 'reactjs-library'
 import './ProjectsItem.sass'
 
 interface Props {

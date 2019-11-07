@@ -1,10 +1,19 @@
-import React, { Fragment, FunctionComponent, useEffect } from 'react'
+import React, { FunctionComponent, useEffect } from 'react'
 import { BrowserRouter as Router, Link, Route, Switch, useRouteMatch } from 'react-router-dom'
-import { classNames, NavigationDrawer, Tooltip, TooltipSetRef, useLocalStorage, useMobile } from 'reactjs-library'
+import {
+    Animate,
+    ApplicationBar,
+    classNames,
+    Icon,
+    List,
+    NavigationDrawer,
+    Tooltip,
+    TooltipSetRef,
+    useLocalStorage,
+    useMobile
+} from 'reactjs-library'
+import { AnimateStyle } from 'reactjs-library/components/Animate/Animate'
 import './App.sass'
-import ApplicationBar from './components/ApplicationBar/ApplicationBar'
-import Icon from './components/Icon/Icon'
-import List from './components/List/List'
 import EducationSection from './core/Education/EducationSection'
 import ExperienceSection from './core/Experience/ExperienceSection'
 import ProfileSection from './core/Profile/ProfileSection'
@@ -28,7 +37,7 @@ const InnerApp: FunctionComponent = () => {
     let [ isMenuOpen, setMenuOpen ] = useLocalStorage<boolean>('IsMenuOpen', false)
     let [ width ] = useLocalStorage<number>('NavigationDrawer-Width', 8 * 30)
     let [ isMobile ] = useMobile()
-    let [ title ] = useTitle('Ítalo Andrade')
+    let [ title ] = useTitle('Italo Andrade')
 
     let menus = [
         { title: 'Profile', icon: 'account-circle', component: <ProfileSection/> },
@@ -96,10 +105,28 @@ const InnerApp: FunctionComponent = () => {
                 </List>
             </NavigationDrawer>
 
-            {menus.map(menu => (
-                <Fragment key={menu.title}>
-                    {menu.component}
-                </Fragment>
+            {/*<AnimateList
+                items={menus}
+                type='fade-in-up'
+                render={(menu: any, style: AnimateStyle) =>
+                    <div key={menu.title} style={style}>
+                        {menu.component}
+                    </div>
+                }
+            />*/}
+
+            {menus.map((menu, index) => (
+                <Animate
+                    key={menu.title}
+                    delay={(index) * 480}
+                    duration={380}
+                    show={true}
+                    type='fade-in-up'
+                    render={(style: AnimateStyle) => (
+                        <div style={style}>
+                            {menu.component}
+                        </div>
+                    )}/>
             ))}
         </div>
     )

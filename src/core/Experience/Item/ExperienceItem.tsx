@@ -1,8 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import { classNames, useMobile } from 'reactjs-library'
-import Text from '../../../components/Text/Text'
-import useTimeAgo from '../../../hooks/useTimeAgo'
-import dateFormat from '../../../utils/dateFormat'
+import { classNames, dateFormat, Text, useMobile, useTimeAgo } from 'reactjs-library'
 import './ExperienceItem.sass'
 
 interface Props {

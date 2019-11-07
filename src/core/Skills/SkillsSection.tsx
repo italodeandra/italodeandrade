@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import Text from '../../components/Text/Text'
+import { Text } from 'reactjs-library'
 import './SkillsSection.sass'
 
 const SkillsSection: FunctionComponent = () => {
@@ -27,6 +27,7 @@ const SkillsSection: FunctionComponent = () => {
                 <Text code className='skill'>Docker</Text>
                 <Text code className='skill'>GitLab CI</Text>
                 <Text code className='skill'>GitHub Actions</Text>
+                <Text code className='skill'>Agile Methodologies</Text>
             </Text>
         </div>
     )
