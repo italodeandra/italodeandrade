@@ -23,6 +23,8 @@ const SkillsSection: FunctionComponent = () => {
                 <Text code className='skill'>MySQL</Text>
             </Text>
             <Text paragraph className='skills'>
+                <Text code className='skill'>Functional Programming</Text>
+                <Text code className='skill'>Object-Oriented Programming</Text>
                 <Text code className='skill'>AWS</Text>
                 <Text code className='skill'>Docker</Text>
                 <Text code className='skill'>GitLab CI</Text>
