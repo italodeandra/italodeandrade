@@ -14,6 +14,7 @@ const SkillsSection: FunctionComponent = () => {
                 <Text code className='skill'>CSS3</Text>
                 <Text code className='skill'>SASS</Text>
                 <Text code className='skill'>UI/UX Design</Text>
+                <Text code className='skill'>PHP</Text>
             </Text>
             <Text paragraph className='skills'>
                 <Text code className='skill'>NodeJS</Text>
