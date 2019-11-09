@@ -9,7 +9,7 @@ const ExperienceSection: FunctionComponent = () => {
     let experiences = [
         {
             name: 'luizalabs',
-            title: 'Developer at luizalabs',
+            title: 'Full Stack Developer at luizalabs',
             period: { start: new Date('2018-08-02'), end: 'present' },
             location: 'Franca, São Paulo, Brazil',
             description: 'Working with a multidisciplinary team focused on developing process automation solutions ' +
@@ -20,7 +20,7 @@ const ExperienceSection: FunctionComponent = () => {
         },
         {
             name: 'smn',
-            title: 'Developer and Scrum Master at SMN',
+            title: 'Full Stack Developer and Scrum Master at SMN',
             period: { start: new Date('2016-05-02'), end: new Date('2018-07-02') },
             location: 'Franca, São Paulo, Brazil',
             description: 'Started as part of a innovation team focused on bringing new technologies. Built the first ' +
