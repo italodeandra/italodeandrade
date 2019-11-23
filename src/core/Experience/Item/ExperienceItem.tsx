@@ -11,6 +11,13 @@ interface Props {
     }
     location: string
     description: string
+    projects?: {
+        year: number
+        title: string
+        description: string
+        technologies: string[]
+        break?: boolean
+    }[]
 }
 
 const ExperienceItem: FunctionComponent<Props> = ({
@@ -18,7 +25,8 @@ const ExperienceItem: FunctionComponent<Props> = ({
                                                       title,
                                                       period,
                                                       location,
-                                                      description
+                                                      description,
+                                                      projects
                                                   }) => {
     let [ isMobile ] = useMobile()
     let dateFormatOptions = { month: 'short', year: 'numeric' }
@@ -45,6 +53,18 @@ const ExperienceItem: FunctionComponent<Props> = ({
                 <div className='location'>{location}</div>
                 <Text justify>
                     {description}
+                </Text>
+                <Text paragraph className='skills'>
+                    <Text subheader style={{ marginTop: 2 * 8 }}>Projects</Text>
+                    {projects && projects.map(project => (<div style={{ marginTop: 2 * 8 }}>
+                        <Text paragraph justify>
+                            {project.year} <Text bold>{project.title}</Text>
+                        </Text>
+                        <Text paragraph justify>
+                            {project.description} Using {project.technologies.join(', ')}.
+                        </Text>
+                        <div className={project.break ? 'page-break-after' : undefined}/>
+                    </div>))}
                 </Text>
             </div>
         </Text>

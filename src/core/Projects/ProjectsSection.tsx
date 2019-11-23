@@ -6,7 +6,7 @@ import './ProjectsSection.sass'
 const ProjectsSection: FunctionComponent = () => {
     let [ isMobile ] = useMobile()
 
-    let experiences = [
+    let projects = [
         {
             name: 'react',
             title: 'ReactJS Library',
@@ -28,14 +28,14 @@ const ProjectsSection: FunctionComponent = () => {
         <div id='projects' className='Projects Section' tabIndex={1}>
             <Text header>Projects</Text>
             <div className={classNames('projects', isMobile && 'is-mobile')}>
-                {experiences.map(e => (
+                {projects.map(p => (
                     <ProjectsItem
-                        key={e.name}
-                        name={e.name}
-                        title={e.title}
-                        period={e.period}
-                        location={e.location}
-                        description={e.description}
+                        key={p.name}
+                        name={p.name}
+                        title={p.title}
+                        period={p.period}
+                        location={p.location}
+                        description={p.description}
                     />
                 ))}
             </div>
