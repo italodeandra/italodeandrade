@@ -1,6 +1,7 @@
 {
     "extends": "tslint:recommended",
     "rules": {
-        "trailing-comma": [ true, { "multiline": "never", "singleline": "never" } ]
+        "trailing-comma": [ true, { "multiline": "never", "singleline": "never" } ],
+        "semicolon": [ true, "never" ]
     }
 }
