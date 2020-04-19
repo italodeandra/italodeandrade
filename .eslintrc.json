@@ -1,0 +1,10 @@
+{
+  "extends": "react-app",
+  "rules": {
+    "comma-dangle": ["warn", "never"],
+    "semi": ["warn", "never"],
+    "no-trailing-spaces": ["warn", { "ignoreComments": true }],
+    "no-var": ["warn"],
+    "prefer-const": ["warn"]
+  }
+}
