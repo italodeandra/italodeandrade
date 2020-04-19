@@ -23,6 +23,7 @@
     "react-scripts": "3.4.1",
     "react-spring": "^8.0.27",
     "react-use": "^14.1.1",
+    "smooth-scroll-into-view-if-needed": "^1.1.27",
     "typescript": "~3.7.2"
   },
   "scripts": {

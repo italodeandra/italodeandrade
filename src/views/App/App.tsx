@@ -1,12 +1,11 @@
 import React, { useMemo } from 'react'
 import { createMuiTheme, makeStyles, Theme, ThemeProvider } from '@material-ui/core/styles'
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
-import { grey } from '@material-ui/core/colors'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { grey, blue } from '@material-ui/core/colors'
 import { CssBaseline, Fade, useMediaQuery } from '@material-ui/core'
 import {
-  HomeRounded as HomeRoundedIcon,
   PolicyRounded as PolicyRoundedIcon,
-  TrackChangesRounded as TrackChangesRoundedIcon
+  PersonRounded
 } from '@material-ui/icons'
 import { useLocalStorage } from 'react-use'
 import Drawer, { toolbarStyles } from '../../common/components/App/Drawer/Drawer'
@@ -35,8 +34,13 @@ const useStyles = makeStyles((theme: Theme) => ({
 }))
 
 const menus = [
-    { title: 'Home', icon: <HomeRoundedIcon />, url: '/', exact: true },
-    { title: 'Tweet trap', icon: <TrackChangesRoundedIcon />, url: '/tweet-trap' }
+    { title: 'Profile', icon: <PersonRounded />, url: '/', exact: true },
+    {
+        subheader: 'Projects',
+        title: 'Twitter Toxic-bot Filter',
+        icon: <PolicyRoundedIcon />,
+        url: 'https://twitter-toxic-bot-filter.italodeandra.de/'
+    }
 ]
 
 export const appTitle = 'Ítalo Andrade'
@@ -44,15 +48,6 @@ export const appTitle = 'Ítalo Andrade'
 function AppWithProviders() {
     const classes = useStyles()
     const [ open, setOpen ] = useLocalStorage<boolean>('NavigationDrawerOpen', false)
-
-    const logo = useMemo(() => (
-        <Link
-            to="/"
-            className={classes.logo}
-        >
-            <PolicyRoundedIcon aria-label="twitter toxic-bot filter's logo" />
-        </Link>
-    ), [ classes ])
 
     function handleDrawerOpen() {
         setOpen(true)
@@ -66,14 +61,14 @@ function AppWithProviders() {
         <div className={classes.root}>
             <AppBar
                 open={open}
-                logo={logo}
+                // logo={logo}
                 handleDrawerOpen={handleDrawerOpen}
-                appTitle={appTitle}
+                // appTitle={appTitle}
                 drawerShowing
             />
             <Drawer
                 open={open}
-                logo={logo}
+                // logo={logo}
                 handleDrawerClose={handleDrawerClose}
                 handleDrawerOpen={handleDrawerOpen}
                 show
@@ -103,17 +98,20 @@ function App() {
             type: prefersDarkMode ? 'dark' : 'light',
             primary: {
                 main: grey[600]
+            },
+            secondary: {
+                main: blue[500]
             }
         }
     }), [ prefersDarkMode ])
 
     return (
         <ThemeProvider theme={theme}>
-        <CssBaseline />
+            <CssBaseline />
 
-        <Router>
-            <AppWithProviders />
-        </Router>
+            <Router>
+                <AppWithProviders />
+            </Router>
         </ThemeProvider>
     )
 }
