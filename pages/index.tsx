@@ -159,7 +159,7 @@ const Deck = () => {
 const Home = () => (
   <div id="root">
     <Head>
-      <title>Ítalo Andrade</title>
+      <title>Ítalo de Andrade</title>
       <link rel="icon" href={"/favicon.ico"} />
       <link
         rel="apple-touch-icon"
