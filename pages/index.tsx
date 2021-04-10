@@ -68,7 +68,7 @@ const cards = [
     />
     <p>
       This is an extension to save which YouTube videos you watched and then
-      hide them
+      hide them.
     </p>
     <p>
       <a href="https://github.com/italodeandra/youtube-plus" target="_blank">
