@@ -42,23 +42,6 @@ const cards = [
     </p>
   </div>,
   <div className="card">
-    <h1>React Library</h1>
-    <div
-      className="project"
-      style={{
-        backgroundImage: "url(/react-library.png)",
-      }}
-    />
-    <p>
-      This is the library I developed to share React code between my projects.
-    </p>
-    <p>
-      <a href="https://github.com/italodeandra/react-library" target="_blank">
-        github/react-library
-      </a>
-    </p>
-  </div>,
-  <div className="card">
     <h1>YouTube Plus</h1>
     <div
       className="project"
