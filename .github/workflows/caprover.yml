@@ -24,6 +24,7 @@ jobs:
           server: 'https://captain.majapi.com'
           password: '${{ secrets.CAPROVER_PASSWORD }}'
           appname: 'italodeandra'
+          branch: 'main'
 
   # This workflow contains a single job called "build"
 #   build:
