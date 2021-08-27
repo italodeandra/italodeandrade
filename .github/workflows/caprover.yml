@@ -21,9 +21,9 @@ jobs:
     steps:
       - uses: AlexxNB/caprover-action@v1
         with:
-          server: 'https://captain.root.domain.com'
+          server: 'https://captain.majapi.com'
           password: '${{ secrets.CAPROVER_PASSWORD }}'
-          appname: 'my-app'
+          appname: 'italodeandra'
 
   # This workflow contains a single job called "build"
 #   build:
