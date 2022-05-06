@@ -1,23 +1,29 @@
 {
   "name": "italodeandrade",
-  "version": "0.1.0",
-  "private": true,
+  "description": "Personal website",
+  "version": "0.2.0",
   "scripts": {
-    "dev": "next dev",
+    "prepare": "npx husky install",
+    "yalc:update": "yalc update",
+    "dev": "next",
     "build": "next build",
-    "start": "next start -p $PORT"
+    "build:analyze": "cross-env ANALYZE=true npm run build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "jest --passWithNoTests",
+    "pre-commit": "lint-staged",
+    "pre-push": "npm test",
+    "vercel-dev": "vercel dev"
   },
   "dependencies": {
-    "@fontsource/inter": "^4.2.2",
-    "next": "11.0.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-spring": "9.0.0-beta.3",
-    "react-use-gesture": "5.0.0"
+    "@iconify/icons-fa-brands": "^1.2.2",
+    "@italodeandra/ui": "^0.6.0"
   },
   "devDependencies": {
-    "@types/react": "17.0.14",
-    "prettier": "2.3.2",
-    "typescript": "4.3.5"
+    "@italodeandra/dev": "^0.2.3-canary.0"
+  },
+  "optionalDependencies": {
+    "@mui/material": "npm:@mui/material",
+    "react-use": "npm:react-use"
   }
 }
