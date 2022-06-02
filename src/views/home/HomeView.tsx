@@ -218,7 +218,7 @@ const HomeView = () => {
             >
               <Tooltip title={"Instagram"}>
                 <Link
-                  href="https://majapi.com"
+                  href="https://www.instagram.com/italodeandra/"
                   target={"_blank"}
                   className={"zoom"}
                   color={"inherit"}
