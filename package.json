@@ -1,29 +1,26 @@
 {
   "name": "italodeandrade",
-  "description": "Personal website",
-  "version": "0.2.0",
+  "version": "2.0.0",
+  "private": true,
   "scripts": {
-    "prepare": "npx husky install",
-    "yalc:update": "yalc update",
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
-    "build:analyze": "cross-env ANALYZE=true npm run build",
     "start": "next start",
-    "lint": "next lint",
-    "test": "jest --passWithNoTests",
-    "pre-commit": "lint-staged",
-    "pre-push": "npm test",
-    "vercel-dev": "vercel dev"
+    "lint": "eslint"
   },
   "dependencies": {
-    "@iconify/icons-fa-brands": "^1.2.2",
-    "@italodeandra/ui": "^0.6.0"
+    "next": "16.4.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
   },
   "devDependencies": {
-    "@italodeandra/dev": "^0.2.3-canary.0"
-  },
-  "optionalDependencies": {
-    "@mui/material": "npm:@mui/material",
-    "react-use": "npm:react-use"
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.3",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }
